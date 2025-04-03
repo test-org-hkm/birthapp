@@ -18,7 +18,8 @@ async def root():
             "/years": "Calculate years lived (requires birthdate parameter in YYYY-MM-DD format)",
             "/health": "Health check endpoint",
             "/env": "Returns all environment variables",
-            "/himanshu-birthday": "Returns HIMANSHU_BIRTHDAY from .env file"
+            "/himanshu-birthday": "Returns HIMANSHU_BIRTHDAY from .env file",
+            "/pikachu": "Returns Pikachu value from environment variables of k8"
         }
     }
 
@@ -63,4 +64,14 @@ async def get_himanshu_birthday():
     birthday = os.getenv("HIMANSHU_BIRTHDAY")
     if birthday:
         return {"himanshu_birthday": birthday}
-    return {"error": "HIMANSHU_BIRTHDAY not found in .env file"} 
+    return {"error": "HIMANSHU_BIRTHDAY not found in .env file"}
+
+@app.get("/pikachu")
+async def get_pikachu():
+    """
+    Returns the Pikachu value from environment variables
+    """
+    pikachu_value = os.getenv("PIKACHU")
+    if pikachu_value:
+        return {"pikachu": pikachu_value}
+    return {"error": "Pikachu not found in environment variables"} 
