@@ -33,7 +33,7 @@ async def calculate_years(birthdate: str):
     Calculate years lived based on birthdate.
     
     Parameters:
-    - birthdate: Date in YYYY-MM-DD format (e.g., 1990-01-01)
+    - Birthdate: Date in YYYY-MM-DD format (e.g., 1990-01-01)
     
     Returns:
     - years_lived: Number of years lived
