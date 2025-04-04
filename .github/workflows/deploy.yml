@@ -9,7 +9,6 @@ env:
   SERVER_BASE_URL: ${{ secrets.SERVER_BASE_URL }}
   DOMAIN_NAME: birthapp
   NAMESPACE: utils
-  AWS_REGION: ${{ secrets.AWS_REGION }}
 
 jobs:
   build-and-deploy:
