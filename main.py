@@ -30,7 +30,7 @@ async def get_random_number():
 @app.get("/years")
 async def calculate_years(birthdate: str):
     """
-    Calculate years lived based on birthdate
+    Calculate years lived based on birthdate.
     
     Parameters:
     - Birthdate: Date in YYYY-MM-DD format (e.g., 1990-01-01)
